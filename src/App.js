@@ -1,24 +1,21 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, View} from 'react-native';
 
 import CardContainer from './components/card-container/card-container';
 import Header from './components/header/header';
+import Menu from './components/menu/menu';
 import SearchInput from './components/search-input/search-input';
+import {globalStyles} from './styles/global.styles';
 
 export function App() {
   return (
-    <ScrollView style={styles.container}>
-      <Header userName={'Matheus Rocha'} />
-      <SearchInput />
-      <CardContainer />
-    </ScrollView>
+    <>
+      <ScrollView style={globalStyles.container}>
+        <Header userName={'Matheus Rocha'} />
+        <SearchInput />
+        <CardContainer />
+      </ScrollView>
+      <Menu />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#e8e6e6',
-    flex: 1,
-    padding: 20,
-  },
-});
