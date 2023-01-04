@@ -22,7 +22,7 @@ export default styles = StyleSheet.create({
     marginTop: 8,
   },
   textWelcome: {
-    fontSize: responsiveFontSize(5),
+    fontSize: responsiveFontSize(4),
     color: 'black',
     fontWeight: 'bold',
   },
