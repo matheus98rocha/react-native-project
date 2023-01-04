@@ -1,5 +1,9 @@
 import {StyleSheet} from 'react-native';
 
+import {
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
+
 export default styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'column',
@@ -12,18 +16,18 @@ export default styles = StyleSheet.create({
   },
   icon: {
     color: 'black',
-    fontSize: 30,
+    fontSize: responsiveFontSize(4),
   },
   welcomeMessage: {
     marginTop: 8,
   },
   textWelcome: {
-    fontSize: 30,
+    fontSize: responsiveFontSize(5),
     color: 'black',
     fontWeight: 'bold',
   },
   subTitle: {
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: responsiveFontSize(1.7),
   },
 });

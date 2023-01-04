@@ -1,5 +1,9 @@
 import {StyleSheet} from 'react-native';
 
+import {
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
+
 export default styles = StyleSheet.create({
   wrapper: {
     marginTop: 8,
@@ -10,11 +14,11 @@ export default styles = StyleSheet.create({
   },
   input: {
     color: 'black',
-    fontSize: 18,
+    fontSize: responsiveFontSize(2),
     fontWeight: 'bold',
 
     backgroundColor: '#ffff',
-    width: '98%',
+    width: responsiveFontSize(43),
     paddingHorizontal: 15,
     paddingVertical: 15,
     borderRadius: 10,

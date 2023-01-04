@@ -1,9 +1,15 @@
 import {StyleSheet} from 'react-native';
 
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
+
 export default styles = StyleSheet.create({
   wrapper: {
-    width: 175,
-    height: 180,
+    width: responsiveWidth(42),
+    height: responsiveHeight(23),
     padding: 16,
     borderRadius: 20,
     marginBottom: 10,
@@ -16,11 +22,11 @@ export default styles = StyleSheet.create({
   },
   icon: {
     color: '#e6e600',
-    fontSize: 60,
+    fontSize: responsiveFontSize(6),
   },
   iconDots: {
     color: '#ffff',
-    fontSize: 25,
+    fontSize: responsiveFontSize(3),
   },
   mainContent: {
     marginBottom: 7,
@@ -35,7 +41,7 @@ export default styles = StyleSheet.create({
   },
   footerCard: {
     marginTop: 15,
-    fontSize: 12,
+    fontSize: responsiveFontSize(1.4),
     color: '#b3cccc',
   },
 });
