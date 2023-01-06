@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
+import {Alert, Text, View} from 'react-native';
 
 import Icon from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -7,17 +7,39 @@ import {ModalUser} from '../modal-user/modal-user';
 
 import styles from './header.styles';
 
+const showAlert = () =>
+  Alert.alert(
+    'Alert Title',
+    'My Alert Msg',
+    [
+      {
+        text: 'Cancel',
+        onPress: () => Alert.alert('Cancel Pressed'),
+        style: 'cancel',
+      },
+    ],
+    {
+      cancelable: true,
+      onDismiss: () =>
+        Alert.alert(
+          'This alert was dismissed by tapping outside of the alert dialog.',
+        ),
+    },
+  );
+
 const Header = ({userName}) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <ModalUser isOpen={isOpen} handleIsOpen={setIsOpen} />
       <View style={styles.wrapper}>
         <View style={styles.iconsWrapper}>
-          <Text>
-            <Icon name="menu" style={styles.icon} />
-          </Text>
-
+          <Icon
+            name="menu"
+            style={styles.icon}
+            onPress={() => showAlert()}
+          />
           <FontAwesome
             name="user-circle"
             style={styles.icon}

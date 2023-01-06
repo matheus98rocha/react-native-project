@@ -1,5 +1,5 @@
 import React from 'react';
-import {Animated, Modal, SafeAreaView, Text} from 'react-native';
+import {Alert, Animated, Modal, SafeAreaView, Text} from 'react-native';
 import modalUserStyles from './modal-user.styles';
 
 export function ModalUser({isOpen, handleIsOpen}) {
