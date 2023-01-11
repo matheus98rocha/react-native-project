@@ -29,5 +29,6 @@ export default styles = StyleSheet.create({
   subTitle: {
     fontWeight: 'bold',
     fontSize: responsiveFontSize(1.7),
+    color: 'grey'
   },
 });

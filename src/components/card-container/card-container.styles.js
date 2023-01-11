@@ -1,8 +1,13 @@
 import {StyleSheet} from 'react-native';
 
+import {
+  responsiveHeight,
+} from 'react-native-responsive-dimensions';
+
 export default styles = StyleSheet.create({
   wrapper: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: responsiveHeight(50),
   },
 });

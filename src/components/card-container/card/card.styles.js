@@ -41,7 +41,7 @@ export default styles = StyleSheet.create({
   },
   footerCard: {
     marginTop: 15,
-    fontSize: responsiveFontSize(1.4),
-    color: '#b3cccc',
+    fontSize: responsiveFontSize(1.2),
+    color: '#ffff',
   },
 });

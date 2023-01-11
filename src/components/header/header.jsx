@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import {Alert, Text, View} from 'react-native';
 
 import Icon from 'react-native-vector-icons/Entypo';
@@ -7,39 +7,19 @@ import {ModalUser} from '../modal-user/modal-user';
 
 import styles from './header.styles';
 
-const showAlert = () =>
-  Alert.alert(
-    'Alert Title',
-    'My Alert Msg',
-    [
-      {
-        text: 'Cancel',
-        onPress: () => Alert.alert('Cancel Pressed'),
-        style: 'cancel',
-      },
-    ],
-    {
-      cancelable: true,
-      onDismiss: () =>
-        Alert.alert(
-          'This alert was dismissed by tapping outside of the alert dialog.',
-        ),
-    },
-  );
-
 const Header = ({userName}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <ModalUser isOpen={isOpen} handleIsOpen={setIsOpen} />
+      <ModalUser
+        isOpen={isOpen}
+        handleIsOpen={() => setIsOpen(true)}
+        handleClickOverlay={() => setIsOpen(false)}
+      />
       <View style={styles.wrapper}>
         <View style={styles.iconsWrapper}>
-          <Icon
-            name="menu"
-            style={styles.icon}
-            onPress={() => showAlert()}
-          />
+          <Icon name="menu" style={styles.icon} />
           <FontAwesome
             name="user-circle"
             style={styles.icon}
@@ -56,4 +36,4 @@ const Header = ({userName}) => {
   );
 };
 
-export default Header;
+export default memo(Header);

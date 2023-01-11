@@ -1,11 +1,19 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './card.styles';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-const Card = ({itemName, qtdItens, lastUpdate, cardColor}) => {
+const Card = ({
+  itemName,
+  qtdItens,
+  lastUpdate,
+  cardColor,
+  handleSelectCard,
+}) => {
   return (
-    <View style={[styles.wrapper, {backgroundColor: cardColor}]}>
+    <TouchableOpacity
+      style={[styles.wrapper, {backgroundColor: cardColor}]}
+      onPress={handleSelectCard}>
       <View style={styles.headerCard}>
         <Entypo name="folder" style={styles.icon} />
         <Entypo name="dots-three-vertical" style={styles.iconDots} />
@@ -15,7 +23,7 @@ const Card = ({itemName, qtdItens, lastUpdate, cardColor}) => {
         <Text style={styles.qtdItens}>{qtdItens}</Text>
       </View>
       <Text style={styles.footerCard}>Last update {lastUpdate}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

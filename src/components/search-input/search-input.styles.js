@@ -7,14 +7,14 @@ import {
 export default styles = StyleSheet.create({
   wrapper: {
     marginTop: 8,
-    marginBottom: 25,
+    marginBottom: 8,
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row',
   },
   input: {
-    color: 'black',
     fontSize: responsiveFontSize(2),
+    color: 'black',
     fontWeight: 'bold',
 
     backgroundColor: '#ffff',
