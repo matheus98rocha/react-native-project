@@ -1,12 +1,15 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {globalStyles} from '../../styles/global.styles';
 import myFilesStyles from './my-files.styles';
 
-export function MyFiles() {
+export function MyFiles({navigation}) {
   return (
     <View style={globalStyles.container}>
-      <Text>In developmento - My Folder Screen</Text>
+      <Button
+        title="My Folder Screen - Go Back"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   );
 }

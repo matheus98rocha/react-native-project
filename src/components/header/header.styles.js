@@ -11,8 +11,7 @@ export default styles = StyleSheet.create({
   },
   iconsWrapper: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
   },
   icon: {
     color: 'black',

@@ -11,16 +11,8 @@ import {Upload} from '../screens/upload/upload';
 import {Notifications} from '../screens/notifications/notifications';
 import {Profile} from '../screens/profile/profile';
 import {Login} from '../screens/login/login';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator();
-
-export function StackRoutes() {
-  <Stack.Navigator>
-    <Tab.Screen name="Login" component={Login} />
-  </Stack.Navigator>;
-}
 
 export default function Routes() {
   return (
@@ -35,6 +27,7 @@ export default function Routes() {
           },
           tabBarLabelPosition: 'below-icon',
           headerShown: false,
+          unmountOnBlur: true,
         }}>
         <Tab.Screen
           name="Login"

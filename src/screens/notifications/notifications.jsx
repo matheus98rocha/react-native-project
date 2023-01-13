@@ -1,11 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {globalStyles} from '../../styles/global.styles';
 
-export function Notifications() {
+export function Notifications({navigation}) {
   return (
     <View style={globalStyles.container}>
-      <Text>In developmento - Notifications</Text>
+      <Button
+        title="Notification Screen - Go Back"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   );
 }

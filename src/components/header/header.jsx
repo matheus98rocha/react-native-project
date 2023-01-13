@@ -19,7 +19,6 @@ const Header = ({userName}) => {
       />
       <View style={styles.wrapper}>
         <View style={styles.iconsWrapper}>
-          <Icon name="menu" style={styles.icon} />
           <FontAwesome
             name="user-circle"
             style={styles.icon}

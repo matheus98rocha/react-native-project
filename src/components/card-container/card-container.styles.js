@@ -8,6 +8,7 @@ export default styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: responsiveHeight(50),
+    height: responsiveHeight(45),
+    marginTop: 10,
   },
 });

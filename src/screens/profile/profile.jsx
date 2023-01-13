@@ -1,11 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {globalStyles} from '../../styles/global.styles';
 
-export function Profile() {
+export function Profile({navigation}) {
   return (
     <View style={globalStyles.container}>
-      <Text>In developmento - Profile</Text>
+      <Button
+        title="Profile Screen - Go Back"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   );
 }
