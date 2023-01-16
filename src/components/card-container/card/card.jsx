@@ -13,7 +13,8 @@ const Card = ({
   return (
     <TouchableOpacity
       style={[styles.wrapper, {backgroundColor: cardColor}]}
-      onPress={handleSelectCard}>
+      onPress={handleSelectCard}
+      >
       <View style={styles.headerCard}>
         <Entypo name="folder" style={styles.icon} />
         <Entypo name="dots-three-vertical" style={styles.iconDots} />

@@ -15,8 +15,8 @@ export default styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 10,
     position: 'absolute',
-    top: 60,
-    right: 23,
+    top: 54,
+    right: 32,
   },
   modalOverlay: {
     backgroundColor: 'rgba(245, 39, 145, 0)',

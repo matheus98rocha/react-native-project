@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 import modalUserStyles from './modal-user.styles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+import { useNavigation } from '@react-navigation/native';
 
 const showAlert = () =>
   Alert.alert('Exit?', 'Are you sure you want to exit?', [
@@ -25,6 +28,8 @@ const showAlert = () =>
   ]);
 
 export function ModalUser({isOpen, handleIsOpen, handleClickOverlay}) {
+  const navigation = useNavigation();
+
   const itens = [
     {
       label: 'Exit',
@@ -35,6 +40,16 @@ export function ModalUser({isOpen, handleIsOpen, handleClickOverlay}) {
         />
       ),
       function: showAlert,
+    },
+    {
+      label: 'Logout',
+      icon: (
+        <AntDesign
+          name="logout"
+          style={modalUserStyles.menuItenLabel}
+        />
+      ),
+      function: () => navigation.navigate('Login'),
     },
   ];
 

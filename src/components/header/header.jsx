@@ -1,8 +1,9 @@
 import React, {memo, useState} from 'react';
-import {Alert, Text, View} from 'react-native';
+import {Alert, Button, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-import Icon from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {GoToButton} from '../go-button/go-button';
 import {ModalUser} from '../modal-user/modal-user';
 
 import styles from './header.styles';

@@ -8,6 +8,7 @@ export default styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'column',
     marginBottom: 8,
+    marginTop: 20,
   },
   iconsWrapper: {
     flexDirection: 'row',
